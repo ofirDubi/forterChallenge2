@@ -1,0 +1,81 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+	
+		<meta charset="utf-8">
+		<title>NodeJS Skeleton</title>
+		<h1> Welcome to StakcUnderflow</h1>
+		<!-- Load js dep -->
+		<script src="animals.js"></script>
+		<script src="js/lib/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<!-- Some css -->
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	</head>
+	<script>
+		var socket = io();
+	</script>
+	<!-- appController -->
+	<body ng-controller="appController" bgcolor="#b3daff">
+		<h3> your name is {{username}} </h3>
+		
+		<div class="answer-style">
+				<input type="text" ng-model="answer" placeholder="enter answer">
+				<button ng-click="answerQuestion(selectedName, answer)">answer question!</button>
+			</div>
+			<div class="select-style">
+					<select ng-model="selectedName" ng-options="option for option in unansweredQuestions"> 
+					<option > 
+					</select>
+			</div>
+			
+		
+		<div class="container">
+		
+		<div id="chat">
+			
+			<div class="enter-message">
+				<span>
+					<select class="select-style" ng-model="selectedChat">
+						<option value="talk">just talk</option>
+						<option value="ask">ask a question</option>
+					</select>
+					<input type="text" ng-model="question" placeholder="Enter question here">
+					<button ng-click="post(question, selectedChat)">Send</button>
+				
+					
+				</span>
+				<p ng-show="questionError"> <font color="red">{{questionErrorContent}}</font> </p>
+			</div>
+			<div class="message-wrapper">
+				<div class="chat-message" ng-repeat="x in output track by $index" style="white-space:pre-wrap;">
+					
+						<span>{{x}}</span> 
+					
+				</div>
+				<div class="chat-message" ng-repeat="question in unansweredQuestions">
+				
+					<span>
+						Question: {{question}}
+					</span>
+				
+			
+				</div>
+			</div>	
+		</div>
+		
+		<div class="suggested-answers" >
+			<h4> chat bot has found some similar questions to the one you asked</h4>
+			<div ng-repeat="x in botAnswers track by $index">
+					<span>  Question: {{x.question}} <span>
+					</br>
+					<span>   Answer: {{x.answer}} <span>
+					<br></br>
+			</div>
+			
+			
+		</div>
+		</div>
+	</body>
+</html>

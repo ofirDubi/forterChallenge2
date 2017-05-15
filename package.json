@@ -1,0 +1,13 @@
+{
+  "name": "node-skeleton",
+  "version": "0.0.0",
+  "description": "NodeJs + express + angularJs skeleton.",
+  "main": "app.js",
+  "author": "OriW",
+  "dependencies": {
+    "animals": "0.0.3",
+    "aws-es": "^1.5.3",
+    "express": "~4.6.1",
+    "socket.io": "^2.0.1"
+  }
+}

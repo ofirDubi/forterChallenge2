@@ -1,0 +1,112 @@
+.select-style {
+	text-align: left;
+    border: 1px solid #ccc;
+    width: 300px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+.suggested-answers {
+	position:absolute;
+	top:0%;
+	right:0%;
+	border: 5px solid gray;
+	background:white;
+	width:30%;
+	text-align: center;
+}
+.container {
+  position:relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+ 
+ 
+}
+.answer-style {
+  padding: 200px, 200px;
+
+}
+#chat {
+	
+	display: table;
+    height: 50%;
+    width: 35%;
+    border: 5px solid gray;
+	background:white;
+	
+	
+}
+
+.message-wrapper{
+	
+	height:400px;
+	overflow-y:scroll;
+	
+}
+
+.chat-message {
+	
+	padding:5px;
+	text-align: center;
+	display: table;
+	margin: 0 auto;
+	
+}
+
+
+
+
+.enter-message{
+  
+  border-style: solid ;
+  border-width: 0px 0px 5px 0px;
+  padding:0 20px;
+  color:#a1a1a1;
+  height:20%;
+  
+}
+
+
+.enter-message{
+  padding:13px 0px;
+}
+
+.enter-message input{
+  
+  cursor: auto;
+  padding:10px 12px;
+  width:80%;
+  border-radius:2px;
+  /*position: absolute;
+  bottom: 0;
+  left: 2em;*/
+}
+.enter-message button {
+  padding:8px 9px;
+  background:#d3d3d3;
+  border-radius:2px;
+  /*float:right;
+  position: absolute;
+  bottom: 0;
+  right: 2em;*/
+  width: 11%;
+}
+
+
+
+
