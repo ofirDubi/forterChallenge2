@@ -10,8 +10,8 @@ app.use(express.static(__dirname + '/client')); 		// statics
 require('./server/routes.js')(app);						// routes
 
 elasticsearch = new Elasticsearch({
-    accessKeyId: 'AKIAJTXBJTY7NKDCGS3Q',
-    secretAccessKey: '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',
+    accessKeyId: 'AKIAIAGLDIM7HER47ZKA',
+    secretAccessKey: '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',
     service: 'es',
     region: 'us-west-2',
     host: "search-test-w2nudafrgwzftz6ndkh6b7pwyu.us-west-2.es.amazonaws.com"
